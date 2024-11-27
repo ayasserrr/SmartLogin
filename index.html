@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!------------------ Registration Form ---------------->
+    <div id="registration" class="form-container">
+        <h2>Register</h2>
+        <input type="text" id="regName" placeholder="Enter your name">
+        <input type="text" id="regEmail" placeholder="Enter your email">
+        <input type="password" id="regPassword" placeholder="Enter your password">
+        <button onclick="register()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        <p id="regError" class="error"></p>
+    </div>
+
+    <!-------------------- Login Form -------------------->
+    <div id="login" class="form-container hidden">
+        <h2>Login</h2>
+        <input type="text" id="loginEmail" placeholder="Enter your email">
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showRegistration()">Register</a></p>
+        <p id="loginError" class="error"></p>
+    </div>
+
+    <!---------------- Home Page ---------------->
+    <div id="home" class="hidden">
+        <h1 id="userName">Welcome !</h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
